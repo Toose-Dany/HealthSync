@@ -857,6 +857,6 @@ if __name__ == "__main__":
     print(f"Host: {os.getenv('DB_HOST', 'localhost')}:{os.getenv('DB_PORT', '5432')}")
     print(f"User: {os.getenv('DB_USER', 'postgres')}")
     print("/---------------------------------------------------------------------------/")
-    print("API Documentation: http://localhost:8000/docs")
+    print("API Documentation: http://localhost:8080/docs")
     print("/---------------------------------------------------------------------------/")
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
